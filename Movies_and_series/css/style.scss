@@ -1,0 +1,245 @@
+// Файл обнуления
+@import "_nullstyle";
+
+// Переменные
+$white:#fff;
+$lightgrey:#eee;
+$grey:#999999;
+$yellow:#FFBB00;
+$blue:#182131;
+$lightblue:#151F2E;
+$black:#020916;
+
+// Шаблоны
+%tplborder {
+	font-size: 60px;
+	color: green;
+	border-bottom: 5px dashed red
+}
+
+ body {
+ 	font-family: 'sf pro text';
+	color: $white;
+ 	background: $black;
+ }
+
+ a {
+	 color: $white;
+	 transition: color .2s linear;
+
+ }
+
+ a:hover {
+	 color: $yellow;
+
+ }
+
+// Блоки
+@import "blocks/_header";
+@import "blocks/_container";
+@import "blocks/_search";
+@import "blocks/_dropdown-menu";
+@import "blocks/_movies";
+@import "blocks/_intro";
+@import "blocks/_actors";
+
+/* Media ===================== */
+@media (max-width: 1920px) {
+		.actors, .trailer{
+			width: auto;
+		}
+}
+@media (max-width: 1800px){
+	.intro__inner {
+		img {
+			width: 100%;
+		}
+	}
+	.intro__img {
+		height: auto;
+	}
+	.intro__content {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		top: 50%;
+		bottom: 50%;
+		img {
+			width: 250px;
+		}
+		.intro__info {
+			margin-left: 5%;
+		}
+		.intro__title {
+			font-size: 2.5rem;
+		}
+	}
+	.actors__text, .trailer__text {
+		font-size: 1.8rem;
+	}
+	.actors__item {
+		width: 180px;
+		img {
+			width: 180px;
+		}
+		.actors__img{
+			height: 250px;
+		}
+		.actors__name {
+			padding-top: 20px;
+		}
+		.actors__name, .actors__surname {
+			font-size: 1.2rem;
+		}
+		.actors__surname {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.container {
+		max-width: 1300px;
+	}
+	.actors__inner{
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 1025px){
+		// Menu --------------
+		.menu {
+			display: none;
+			position: absolute;
+			right: 15px;
+			top: 90px;
+
+			ul li a{
+				font-size: 1rem;
+			}
+	
+			.topmenu{
+				width: 130px;
+			}
+	
+			// Sub menu
+			li ul {
+				width: 130px;
+				display: block;
+			}
+	
+			&.show {
+				//position: absolute;
+				//width: 100%;
+				display: flex;
+			}	
+		}
+	
+		// Header --------------	
+		
+		.header{
+			justify-content: space-between;
+		}
+		.header__item {
+			input, form{
+				width: 250px;		
+			}
+		}
+
+		.header__item, .menu {
+			//display: flex;
+			width: auto;
+		}
+	
+		.intro__content {
+			font-size: 1rem;
+			line-height: 1.3rem;
+			top: 50%;
+			bottom: 50%;
+			img {
+				width: 200px;
+			}
+			.intro__info {
+				margin-left: 5%;
+			}
+			.intro__title {
+				line-height: 1.5rem;
+				font-size: 2rem;
+				margin-bottom: 5px;
+			}
+			.intro__columns {
+				margin-top: 0;
+			}
+		}
+		.actors, .trailer{
+			padding-top: 10px;
+		}
+		.actors__inner{
+			justify-content: center;
+		} 
+		.actors__item{
+			margin: 15px;
+		}
+
+	.burger {
+		display: block;
+		position: absolute;
+		right: 15px;
+	}
+}
+
+@media (max-width: 766px) {
+	
+	::-webkit-input-placeholder {
+		font-size: 1rem;
+	}
+
+	// Header --------------
+	.header__item{
+		input, form{
+			width: 150px;
+		}
+	}
+
+   .intro__img{
+   	height: 700px;
+   }
+
+   .intro__inner {
+   	img {
+   		width: auto;
+   		position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   	}
+   }
+
+   .intro__content {
+		left: 5%;
+   	img{
+   		width: 150px;
+   		left: 10%;
+   	}
+		.intro__info {
+			margin-left: 0;
+		}
+	
+   }
+
+	iframe{
+		width: 100%;
+		max-width: 560px;
+	}
+}
+
+@media (max-width: 500px) {
+	
+	.intro__content {
+		left: 0;
+		img{
+			display: none;
+		}
+		.intro__title{
+			font-size: 1.5rem;
+		}
+	}
+}

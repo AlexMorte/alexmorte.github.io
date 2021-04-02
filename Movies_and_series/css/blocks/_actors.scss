@@ -1,0 +1,56 @@
+.actors, .trailer {
+	margin: 0 auto;
+	padding-top: 45px;
+	padding-bottom: 20px;
+	width: 1920px;
+	border-bottom: solid 1px rgba($color: #707070, $alpha: .7);
+	
+}
+
+.actors__text, .trailer__text {
+	font-family: SF Pro Display, serif;
+	font-size: 2.4rem;
+}
+
+.actors__info {
+	margin-top: 20px;
+}
+
+.actors__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.actors__item {
+	display: flex;
+	flex-direction: column;
+	width: 260px;
+	img {
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		width: 260px;
+	}
+	.actors__img{
+		height: 360px;
+	}
+	.actors__name {
+		padding-top: 33px;
+		text-align: center;
+	}
+	.actors__name, .actors__surname {
+		font-size: 1.666rem;
+		background-color: $lightblue;
+		text-align: center;
+	}
+	.actors__surname {
+		color: $grey;
+		padding-top: 10px;
+		padding-bottom: 32px;
+		border-bottom-left-radius: 7px;
+		border-bottom-right-radius: 7px;
+	}
+}
+
+.trailer__video {
+	margin-top: 20px;
+}
