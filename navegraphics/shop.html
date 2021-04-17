@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navegraphics</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+	<!-- Sprite -->
+	<svg style="display: none;">
+
+		<symbol id="search" viewBox="0 0 15.707 15.707">
+			<g>
+				<path d="M9.707,0c-3.309,0-6,2.691-6,6c0,1.294,0.416,2.49,1.115,3.471L0,14.293l1.414,1.414l4.822-4.822
+					C7.217,11.584,8.413,12,9.707,12c3.309,0,6-2.691,6-6S13.016,0,9.707,0z M9.707,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
+					S11.913,10,9.707,10z" />
+			</g>
+		</symbol>
+
+		<symbol id="login" viewBox="0 0 551.13 551.13">
+			<g>
+				<path
+					d="m499.462 0h-378.902c-9.52 0-17.223 7.703-17.223 17.223v51.668h34.446v-34.445h344.456v482.239h-344.456v-34.446h-34.446v51.668c0 9.52 7.703 17.223 17.223 17.223h378.902c9.52 0 17.223-7.703 17.223-17.223v-516.684c0-9.52-7.704-17.223-17.223-17.223z" />
+				<path
+					d="m204.588 366.725 24.354 24.354 115.514-115.514-115.514-115.514-24.354 24.354 73.937 73.937h-244.079v34.446h244.08z" />
+			</g>
+		</symbol>
+
+		<symbol id="basket" viewBox="0 0 512 512">
+			<g>
+				<path d="M495.304,178.087h-22.708L410.29,43.09c-2.73-5.912-8.647-9.699-15.16-9.699h-55.652v-5.565
+			C339.478,12.483,326.995,0,311.652,0H200.348c-15.343,0-27.826,12.483-27.826,27.826v5.565H116.87
+			c-6.512,0-12.429,3.787-15.16,9.699L39.404,178.087H16.696C7.475,178.087,0,185.562,0,194.783v66.783
+			c0,9.22,7.475,16.696,16.696,16.696h16.696v183.652C33.391,489.531,55.86,512,83.478,512h345.043
+			c27.618,0,50.087-22.469,50.087-50.087V278.261h16.696c9.22,0,16.696-7.475,16.696-16.696v-66.783
+			C512,185.562,504.525,178.087,495.304,178.087z M205.913,33.391h100.174v33.391H205.913V33.391z M127.553,66.783h44.969v5.565
+			c0,15.343,12.483,27.826,27.826,27.826h111.304c15.343,0,27.826-12.483,27.826-27.826v-5.565h44.969l51.371,111.304H76.181
+			L127.553,66.783z M445.217,461.913c0,9.206-7.49,16.696-16.696,16.696H83.478c-9.206,0-16.696-7.49-16.696-16.696V278.261h378.435
+			V461.913z M478.609,244.87c-4.221,0-425.165,0-428.522,0H33.391v-33.391h16.696c3.372,0,424.322,0,428.522,0V244.87z" />
+			</g>
+			<g>
+				<path d="M122.435,311.652c-9.22,0-16.696,7.475-16.696,16.696v100.174c0,9.22,7.475,16.696,16.696,16.696
+					c9.22,0,16.696-7.475,16.696-16.696V328.348C139.13,319.127,131.655,311.652,122.435,311.652z" />
+			</g>
+			<g>
+				<path d="M189.217,311.652c-9.22,0-16.696,7.475-16.696,16.696v100.174c0,9.22,7.475,16.696,16.696,16.696
+					s16.696-7.475,16.696-16.696V328.348C205.913,319.127,198.438,311.652,189.217,311.652z" />
+			</g>
+			<g>
+				<path d="M256,311.652c-9.22,0-16.696,7.475-16.696,16.696v100.174c0,9.22,7.475,16.696,16.696,16.696
+					c9.22,0,16.696-7.475,16.696-16.696V328.348C272.696,319.127,265.22,311.652,256,311.652z" />
+			</g>
+			<g>
+				<path d="M322.783,311.652c-9.22,0-16.696,7.475-16.696,16.696v100.174c0,9.22,7.475,16.696,16.696,16.696
+					s16.696-7.475,16.696-16.696V328.348C339.478,319.127,332.003,311.652,322.783,311.652z" />
+			</g>
+			<g>
+				<path d="M389.565,311.652c-9.22,0-16.696,7.475-16.696,16.696v100.174c0,9.22,7.475,16.696,16.696,16.696
+					c9.22,0,16.696-7.475,16.696-16.696V328.348C406.261,319.127,398.786,311.652,389.565,311.652z" />
+			</g>
+		</symbol>
+
+		<symbol id="number" viewBox="0 0 512 512">
+			<path
+				d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z">
+			</path>
+		</symbol>
+
+		<symbol id="envelope" viewBox="0 0 512 512">
+			<path
+				d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+			</path>
+		</symbol>
+
+		<symbol id="instagram" viewBox="0 0 448 512">
+			<path
+				d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+			</path>
+		</symbol>
+
+		<symbol id="facebook" viewBox="0 0 320 512">
+			<path
+				d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+			</path>
+		</symbol>
+
+		<symbol id="youtube" viewBox="0 0 576 512">
+			<path
+				d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+			</path>
+		</symbol>
+
+		<symbol id="twitter" viewBox="0 0 512 512">
+			<path
+				d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+			</path>
+		</symbol>
+
+		<symbol id="visa" viewBox="0 0 576 512">
+			<path
+				d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z">
+			</path>
+		</symbol>
+
+		<symbol id="mastercard" viewBox="0 0 576 512">
+			<path
+				d="M482.9 410.3c0 6.8-4.6 11.7-11.2 11.7-6.8 0-11.2-5.2-11.2-11.7 0-6.5 4.4-11.7 11.2-11.7 6.6 0 11.2 5.2 11.2 11.7zm-310.8-11.7c-7.1 0-11.2 5.2-11.2 11.7 0 6.5 4.1 11.7 11.2 11.7 6.5 0 10.9-4.9 10.9-11.7-.1-6.5-4.4-11.7-10.9-11.7zm117.5-.3c-5.4 0-8.7 3.5-9.5 8.7h19.1c-.9-5.7-4.4-8.7-9.6-8.7zm107.8.3c-6.8 0-10.9 5.2-10.9 11.7 0 6.5 4.1 11.7 10.9 11.7 6.8 0 11.2-4.9 11.2-11.7 0-6.5-4.4-11.7-11.2-11.7zm105.9 26.1c0 .3.3.5.3 1.1 0 .3-.3.5-.3 1.1-.3.3-.3.5-.5.8-.3.3-.5.5-1.1.5-.3.3-.5.3-1.1.3-.3 0-.5 0-1.1-.3-.3 0-.5-.3-.8-.5-.3-.3-.5-.5-.5-.8-.3-.5-.3-.8-.3-1.1 0-.5 0-.8.3-1.1 0-.5.3-.8.5-1.1.3-.3.5-.3.8-.5.5-.3.8-.3 1.1-.3.5 0 .8 0 1.1.3.5.3.8.3 1.1.5s.2.6.5 1.1zm-2.2 1.4c.5 0 .5-.3.8-.3.3-.3.3-.5.3-.8 0-.3 0-.5-.3-.8-.3 0-.5-.3-1.1-.3h-1.6v3.5h.8V426h.3l1.1 1.4h.8l-1.1-1.3zM576 81v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V81c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM64 220.6c0 76.5 62.1 138.5 138.5 138.5 27.2 0 53.9-8.2 76.5-23.1-72.9-59.3-72.4-171.2 0-230.5-22.6-15-49.3-23.1-76.5-23.1-76.4-.1-138.5 62-138.5 138.2zm224 108.8c70.5-55 70.2-162.2 0-217.5-70.2 55.3-70.5 162.6 0 217.5zm-142.3 76.3c0-8.7-5.7-14.4-14.7-14.7-4.6 0-9.5 1.4-12.8 6.5-2.4-4.1-6.5-6.5-12.2-6.5-3.8 0-7.6 1.4-10.6 5.4V392h-8.2v36.7h8.2c0-18.9-2.5-30.2 9-30.2 10.2 0 8.2 10.2 8.2 30.2h7.9c0-18.3-2.5-30.2 9-30.2 10.2 0 8.2 10 8.2 30.2h8.2v-23zm44.9-13.7h-7.9v4.4c-2.7-3.3-6.5-5.4-11.7-5.4-10.3 0-18.2 8.2-18.2 19.3 0 11.2 7.9 19.3 18.2 19.3 5.2 0 9-1.9 11.7-5.4v4.6h7.9V392zm40.5 25.6c0-15-22.9-8.2-22.9-15.2 0-5.7 11.9-4.8 18.5-1.1l3.3-6.5c-9.4-6.1-30.2-6-30.2 8.2 0 14.3 22.9 8.3 22.9 15 0 6.3-13.5 5.8-20.7.8l-3.5 6.3c11.2 7.6 32.6 6 32.6-7.5zm35.4 9.3l-2.2-6.8c-3.8 2.1-12.2 4.4-12.2-4.1v-16.6h13.1V392h-13.1v-11.2h-8.2V392h-7.6v7.3h7.6V416c0 17.6 17.3 14.4 22.6 10.9zm13.3-13.4h27.5c0-16.2-7.4-22.6-17.4-22.6-10.6 0-18.2 7.9-18.2 19.3 0 20.5 22.6 23.9 33.8 14.2l-3.8-6c-7.8 6.4-19.6 5.8-21.9-4.9zm59.1-21.5c-4.6-2-11.6-1.8-15.2 4.4V392h-8.2v36.7h8.2V408c0-11.6 9.5-10.1 12.8-8.4l2.4-7.6zm10.6 18.3c0-11.4 11.6-15.1 20.7-8.4l3.8-6.5c-11.6-9.1-32.7-4.1-32.7 15 0 19.8 22.4 23.8 32.7 15l-3.8-6.5c-9.2 6.5-20.7 2.6-20.7-8.6zm66.7-18.3H408v4.4c-8.3-11-29.9-4.8-29.9 13.9 0 19.2 22.4 24.7 29.9 13.9v4.6h8.2V392zm33.7 0c-2.4-1.2-11-2.9-15.2 4.4V392h-7.9v36.7h7.9V408c0-11 9-10.3 12.8-8.4l2.4-7.6zm40.3-14.9h-7.9v19.3c-8.2-10.9-29.9-5.1-29.9 13.9 0 19.4 22.5 24.6 29.9 13.9v4.6h7.9v-51.7zm7.6-75.1v4.6h.8V302h1.9v-.8h-4.6v.8h1.9zm6.6 123.8c0-.5 0-1.1-.3-1.6-.3-.3-.5-.8-.8-1.1-.3-.3-.8-.5-1.1-.8-.5 0-1.1-.3-1.6-.3-.3 0-.8.3-1.4.3-.5.3-.8.5-1.1.8-.5.3-.8.8-.8 1.1-.3.5-.3 1.1-.3 1.6 0 .3 0 .8.3 1.4 0 .3.3.8.8 1.1.3.3.5.5 1.1.8.5.3 1.1.3 1.4.3.5 0 1.1 0 1.6-.3.3-.3.8-.5 1.1-.8.3-.3.5-.8.8-1.1.3-.6.3-1.1.3-1.4zm3.2-124.7h-1.4l-1.6 3.5-1.6-3.5h-1.4v5.4h.8v-4.1l1.6 3.5h1.1l1.4-3.5v4.1h1.1v-5.4zm4.4-80.5c0-76.2-62.1-138.3-138.5-138.3-27.2 0-53.9 8.2-76.5 23.1 72.1 59.3 73.2 171.5 0 230.5 22.6 15 49.5 23.1 76.5 23.1 76.4.1 138.5-61.9 138.5-138.4z">
+			</path>
+		</symbol>
+	</svg>
+
+	<!-- ! Сайдбар, который выезжает при нажатии на бургер, сам бургер в шапке "header" в "logo" -->
+	<input type="checkbox" id="menu-checkbox">
+	<div class="sidebar menu-sidebar">
+		<label for="menu-checkbox"></label>
+		<div class="menu-sidebar__title">
+			Меню
+		</div>
+		<div class="menu-sidebar__nav">
+			<a class="menu-sidebar__link" href="index.html">Главная</a>
+			<a class="menu-sidebar__link" href="shop.html">Магазин</a>
+			<a class="menu-sidebar__link" href="#">Блог</a>
+			<a class="menu-sidebar__link" href="contacts.html">Контакты</a>
+		</div>
+	</div>
+	<!-- Конец сайдбара -->
+
+	<!-- Контент сайта поместил в main и article, чтобы сделать так, чтобы контент смещался при появлении бокового меню на моб. устройствах -->
+	<main role="main">
+		<article>
+
+			<header class="header header__pages" id="header">
+				<div class="container">
+					<div class="header__inner">
+						<div class="logo">
+							<!-- В картинке добавил fill-opacity="0" после цвета фона что бы сделать его прозрачным -->
+							<a href="index.html">
+								<img src="images/logo/dave-graphics.svg" alt="">
+							</a>
+
+							<div class="burger">
+								<label class="burger__link" for="menu-checkbox">
+
+									<div class="burger__icon burger-menu">
+										<h6>burger</h6>
+									</div>
+								</label>
+							</div>
+
+						</div>
+
+
+
+						<div class="header__item">
+							<nav class="nav">
+								<a href="index.html" class="nav__link header__link">главная</a>
+								<div class="nav__link-shop">
+									<a href="#" class="nav__link" id="linkShop">
+										магазин
+									</a>
+
+									<!-- ! Блок, который выезжает при наведении на вышележащюю ссылку "магазин" -->
+									<div class="slide-down">
+										<div class="container">
+											<div class="slide-down__row">
+												<div class="slide-down__column">
+													<a href="#" class="slide-down__link">новинки</a>
+													<a href="#" class="slide-down__link">nvidia</a>
+													<a href="#" class="slide-down__link">radeon</a>
+												</div>
+												<div class="goods">
+													<div class="goods__item">
+														<a href="#">
+															<div class="goods__inner">
+																<div class="goods__img">
+																	<img src="images/video_cards/catalogue/GTX1080_1.jpg" alt="">
+																</div>
+																<div class="goods__brand">nVidia GTX 1080 ti</div>
+															</div>
+														</a>
+														<div class="goods__price">18 000 ₴</div>
+													</div>
+
+													<div class="goods__item">
+														<a href="#">
+															<div class="goods__inner">
+																<div class="goods__img">
+																	<img src="images/video_cards/catalogue/RTX3060Ti_1.jpg" alt="">
+																</div>
+																<div class="goods__brand">nVidia RTX 3060 ti</div>
+															</div>
+														</a>
+														<div class="goods__price">56 000 ₴</div>
+													</div>
+
+													<div class="goods__item">
+														<a href="#">
+															<div class="goods__inner">
+																<div class="goods__img">
+																	<img src="images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
+																</div>
+																<div class="goods__brand">Radeon RX 580</div>
+															</div>
+														</a>
+														<div class="goods__price">18 000 ₴</div>
+													</div>
+
+													<div class="goods__item">
+														<div class="goods__discount">
+															суперцена
+														</div>
+														<a href="#">
+															<div class="goods__inner">
+																<div class="goods__img">
+																	<img src="images/video_cards/catalogue/RadeonRX5700xt_1.jpg" alt="">
+																</div>
+																<div class="goods__brand">Radeon RX 5700 xt</div>
+															</div>
+														</a>
+														<div class="goods__price">39 999 ₴ <strike>47 000 ₴</strike></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Конец выпадающего блока -->
+								</div>
+								<a href="#" class="nav__link">блог</a>
+								<a href="contacts.html" class="nav__link">контакты</a>
+							</nav>
+
+							<!-- ! Сайдбар для регистрации и входа (стили в файле "_sidebar.scss") -->
+							<input type="checkbox" id="login-checkbox">
+							<div class="sidebar login-sidebar">
+								<label class="sidebar-hider" for="login-checkbox"></label>
+								<div class="login-sidebar__title">
+									Вход
+								</div>
+								<form class="form" action="/some-page" method="post">
+									<ul>
+										<li class="form__line">
+											<label for="mail">E-mail</label>
+											<input class="form__input" type="email" id="mail" name="user_mail">
+										</li>
+										<li class="form__line">
+											<label for="password">Пароль</label>
+											<input class="form__input" type="password" id="mail" name="user_password">
+										</li>
+										<li class="form__line">
+											<input type="checkbox" name="" id="">
+											<div class="div">Запомнить меня?</div>
+										</li>
+
+										<button type="submit" class="btn btn-red">Вход</button>
+									</ul>
+								</form>
+							</div>
+
+
+							<div class="login">
+								<label class="login__link login__pages" for="login-checkbox">
+									<svg class="login__icon">
+										<use xlink:href="#login"></use>
+									</svg>
+									<div class="login__link-text header__link">Войти</div>
+								</label>
+							</div>
+							<!-- Конец сайдбара -->
+
+							<div class="search">
+								<a class="search__link search__pages" href="#">
+									<svg class="search__icon">
+										<use xlink:href="#search"></use>
+									</svg>
+									<div class="search__link-text header__link">Search</div>
+								</a>
+							</div>
+
+							<!-- ! Выдвижной сайдбар для корзины -->
+							<!-- Сайдбар обязательно должен идти сразу после флажка "checkbox" -->
+							<input type="checkbox" id="sidebar-checkbox">
+							<div class="sidebar">
+								<label class="sidebar-hider" for="sidebar-checkbox"></label>
+								<div class="sidebar__title">
+									КОРЗИНА
+								</div>
+								<div class="sidebar__subtitle">
+									В вашей корзине нет товаров.
+								</div>
+								<div class="sidebar__text">
+									Нам не удалось сохранить Ваш заказ так как в корзине нет товаров.
+									Пожалуйста, добавьте необходиме товары, чтобы
+									оформить заказ.
+								</div>
+							</div>
+
+							<div class="basket">
+								<label class="basket__button" for="sidebar-checkbox">
+									<svg class="basket__icon basket__pages">
+										<use xlink:href="#basket"></use>
+									</svg>
+								</label>
+							</div>
+							<!-- Конец сайдбара -->
+
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="catalogue catalogue__shop">
+				<div class="container">
+					<div class="catalogue__inner">
+						<div class="catalogue__menu">
+							<a class="catalogue__link" href="#">Новинки</a>
+							<a class="catalogue__link" href="#">Распродажа</a>
+							<a class="catalogue__link" href="#">nVidia</a>
+							<a class="catalogue__link" href="#">Radeon</a>
+						</div>
+
+						<div class="catalogue__item">
+							<div class="catalogue__title catalogue__pages">
+								<h2>Магазин</h2>
+							</div>
+
+							<div class="goods goods__shop">
+								<div class="goods__item">
+									<a href="nVidia-GTX-1080-ti.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="images/video_cards/catalogue/GTX1080_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">nVidia GTX 1080 ti</div>
+										</div>
+									</a>
+									<div class="goods__price">18 000 ₴</div>
+								</div>
+
+								<div class="goods__item">
+									<a href="nVidia-RTX-3060-ti.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="images/video_cards/catalogue/RTX3060Ti_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">nVidia RTX 3060 ti</div>
+										</div>
+									</a>
+									<div class="goods__price">56 000 ₴</div>
+								</div>
+
+								<div class="goods__item">
+									<a href="Radeon-RX-580.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">Radeon RX 580</div>
+										</div>
+									</a>
+									<div class="goods__price">18 000 ₴</div>
+								</div>
+
+								<div class="goods__item">
+									<div class="goods__discount">
+										суперцена
+									</div>
+									<a href="Radeon-RX-5700-XT.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="images/video_cards/catalogue/RadeonRX5700xt_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">Radeon RX 5700 xt</div>
+										</div>
+									</a>
+									<div class="goods__price">39 999 ₴ <strike>47 000 ₴</strike></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__logo">
+							<div class="logo">
+								<!-- В картинке добавил fill-opacity="0" после цвета фона что бы сделать его прозрачным -->
+								<img src="images/logo/dave-graphics.svg" alt="">
+							</div>
+							<a href="#" class="footer__link">
+								<svg class="footer__icon">
+									<use xlink:href="#number"></use>
+								</svg>
+								<div>+38 (099) 000 00 00</div>
+							</a>
+
+							<a href="#" class="footer__link">
+								<svg class="footer__icon">
+									<use xlink:href="#envelope"></use>
+								</svg>
+								<div>example@mail.com</div>
+							</a>
+						</div>
+						<div class="footer__inner">
+							<nav class="nav">
+								<a href="#" class="nav__link">Главная</a>
+								<a href="#" class="nav__link">Магазин</a>
+								<a href="#" class="nav__link">Блог</a>
+								<a href="#" class="nav__link">Контакты</a>
+							</nav>
+
+							<div class="footer__item">
+								<div class="social">
+									<div class="social__text">Мы в социальных сетях:</div>
+									<div class="social__inner">
+										<a class="social__item" href="#">
+											<svg class="social__icon">
+												<use xlink:href="#instagram"></use>
+											</svg>
+										</a>
+
+										<a class="social__item" href="#">
+											<svg class="social__icon">
+												<use xlink:href="#facebook"></use>
+											</svg>
+										</a>
+
+										<a class="social__item" href="#">
+											<svg class="social__icon">
+												<use xlink:href="#youtube"></use>
+											</svg>
+										</a>
+
+										<a class="social__item" href="#">
+											<svg class="social__icon">
+												<use xlink:href="#twitter"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div class="footer__schedule">
+									<div class="footer__schedule footer__schedule-title">Время работы:</div>
+									<div class="footer__schedule footer__schedule-subtitle">ПН-СБ 10:00-20:00, ВС 10:00-18:00
+									</div>
+								</div>
+							</div>
+
+							<div class="footer__item">
+								<div class="footer__line">Наш адрес</div>
+								<div class="footer__line footer__line-bold">г. Город, ул. Улица, 11</div>
+								<div class="footer__line">Gold Store © 2021</div>
+								<div class="footer__line footer__line-bold">Платите с помощью карты</div>
+								<div class="footer__line">
+									<svg class="footer__card footer__card-mastercard">
+										<use xlink:href="#mastercard"></use>
+									</svg>
+
+									<svg class="footer__card footer__card-visa">
+										<use xlink:href="#visa"></use>
+									</svg>
+								</div>
+								<div class="footer__line currency">
+									<a class="currency__link" href="#">USD</a>
+									<div class="currency__line">|</div>
+									<a class="currency__link" id="active" href="#">UAH</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__shopexpress">Сделано по шаблону с сайта <a
+								href="https://shop-express.com.ua/">Shop-Express</a>™
+						</div>
+						<div class="footer__language currency">
+							<a class="currency__link" id="active" href="#">RUS</a>
+							<div class="currency__line">|</div>
+							<a class="currency__link" href="#">ENG</a>
+							<div class="currency__line">|</div>
+							<a class="currency__link" href="#">UKR</a>
+						</div>
+					</div>
+
+					<div class="footer__flaticon">Icons made by <a href="" title="Those Icons">Those Icons</a>, <a
+							href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and
+						<a href="https://creativemarket.com/Becris" title="Becris">Becris</a> from <a
+							href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+					</div>
+				</div>
+			</footer>
+
+		</article>
+	</main>
+
+
+	<script src="js/app.js"></script>
+</body>
+
+</html>

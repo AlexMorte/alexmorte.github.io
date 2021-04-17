@@ -1,0 +1,123 @@
+
+.header {
+	width: 100%; // Что бы шапка стала по центру, в контейнере
+	position: absolute;
+	z-index: 10;
+	font-size: 0.93rem;
+
+	a {
+		color: $white;
+		&:focus {
+			color: $red;
+		}
+	}
+	.header__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		.header__item {
+			display: flex;
+			align-items: center;
+			.nav {	
+				display: flex;
+				.nav__link {
+					display: flex;
+					align-items: center;
+					height: 100px;				
+					font-weight: 600;
+					margin-left: 1.5rem;
+					text-transform: uppercase;
+				}
+				.nav__link-shop {
+					#linkShop::after { // Стрелка после ссылки "магазин"
+						content: '';
+						background-image: url(../../images/header/down-arrow.svg);
+						background-size: 9px;
+						width: 9px;
+						height: 9px;
+						margin-left: 5px;
+						display: inline-block;
+						transition: 1s ease all;
+					}
+					&:hover {				
+						.slide-down { // ! Появление блока при наведении
+							display: block;
+						}
+						#linkShop::after {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+			.login {
+				color: $white;
+				margin-left: 2.5rem;
+				margin-right: 1.5rem;			
+			}	
+
+			.search {
+				margin-right: 6rem;
+			}	
+
+			.login__link, .search__link {
+				display: flex;	
+				fill: $white;
+				cursor: pointer;	
+				&:hover {
+					.login__link-text, .search__link-text {
+						color: $red;
+						transition: .2s linear;
+					}
+				}	
+			}
+			.search__icon, .login__icon {
+				display: block;
+				width: 15px;
+				height: 15px;
+			}
+			.login__link-text, .search__link-text {
+				padding-left: 5px;
+			}
+		} 		
+	}
+}
+
+.header__pages {
+	position: relative;
+	background-color: $black;
+}
+
+// Стили для фиксированния шапки при скроле
+.header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $black;
+
+	animation-name: showHeader;
+	animation-duration: 0.5s;
+}
+
+@keyframes showHeader {
+	0% {
+		//opacity: 0;
+		top: -70px; // Что бы шапка плавно появилась сверху
+	}
+	100% {
+		//opacity: 1;
+		top: 0;
+	}
+}
+
+@-webkit-keyframes showHeader {
+	0% {
+		//opacity: 0;
+		top: -70px; // Что бы шапка плавно появилась сверху
+	}
+	100% {
+		//opacity: 1;
+		top: 0;
+	}
+}
+
