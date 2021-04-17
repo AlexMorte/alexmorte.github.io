@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Navegraphics</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -126,10 +126,10 @@
 			Меню
 		</div>
 		<div class="menu-sidebar__nav">
-			<a class="menu-sidebar__link" href="index.html">Главная</a>
+			<a class="menu-sidebar__link" href="../index.html">Главная</a>
 			<a class="menu-sidebar__link" href="shop.html">Магазин</a>
 			<a class="menu-sidebar__link" href="#">Блог</a>
-			<a class="menu-sidebar__link" href="#">Контакты</a>
+			<a class="menu-sidebar__link" href="contacts.html">Контакты</a>
 		</div>
 	</div>
 	<!-- Конец сайдбара -->
@@ -143,8 +143,8 @@
 					<div class="header__inner">
 						<div class="logo">
 							<!-- В картинке добавил fill-opacity="0" после цвета фона что бы сделать его прозрачным -->
-							<a href="index.html">
-								<img src="images/logo/dave-graphics.svg" alt="">
+							<a href="../index.html">
+								<img src="../images/logo/dave-graphics.svg" alt="">
 							</a>
 
 							<div class="burger">
@@ -162,9 +162,9 @@
 
 						<div class="header__item">
 							<nav class="nav">
-								<a href="index.html" class="nav__link header__link">главная</a>
+								<a href="../index.html" class="nav__link header__link">главная</a>
 								<div class="nav__link-shop">
-									<a href="shop.html" class="nav__link" id="linkShop">
+									<a href="#" class="nav__link" id="linkShop">
 										магазин
 									</a>
 
@@ -182,7 +182,7 @@
 														<a href="#">
 															<div class="goods__inner">
 																<div class="goods__img">
-																	<img src="images/video_cards/catalogue/GTX1080_1.jpg" alt="">
+																	<img src="../images/video_cards/catalogue/GTX1080_1.jpg" alt="">
 																</div>
 																<div class="goods__brand">nVidia GTX 1080 ti</div>
 															</div>
@@ -194,7 +194,7 @@
 														<a href="#">
 															<div class="goods__inner">
 																<div class="goods__img">
-																	<img src="images/video_cards/catalogue/RTX3060Ti_1.jpg" alt="">
+																	<img src="../images/video_cards/catalogue/RTX3060Ti_1.jpg" alt="">
 																</div>
 																<div class="goods__brand">nVidia RTX 3060 ti</div>
 															</div>
@@ -206,7 +206,7 @@
 														<a href="#">
 															<div class="goods__inner">
 																<div class="goods__img">
-																	<img src="images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
+																	<img src="../images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
 																</div>
 																<div class="goods__brand">Radeon RX 580</div>
 															</div>
@@ -221,7 +221,7 @@
 														<a href="#">
 															<div class="goods__inner">
 																<div class="goods__img">
-																	<img src="images/video_cards/catalogue/RadeonRX5700xt_1.jpg" alt="">
+																	<img src="../images/video_cards/catalogue/RadeonRX5700xt_1.jpg" alt="">
 																</div>
 																<div class="goods__brand">Radeon RX 5700 xt</div>
 															</div>
@@ -235,7 +235,7 @@
 									<!-- Конец выпадающего блока -->
 								</div>
 								<a href="#" class="nav__link">блог</a>
-								<a href="#" class="nav__link">контакты</a>
+								<a href="contacts.html" class="nav__link">контакты</a>
 							</nav>
 
 							<!-- ! Сайдбар для регистрации и входа (стили в файле "_sidebar.scss") -->
@@ -317,86 +317,78 @@
 				</div>
 			</header>
 
-			<div class="product">
+			<div class="catalogue catalogue__shop">
 				<div class="container">
-					<div class="product__inner">
-						<div class="product__item">
-							<a class="product__img" id="productImgFirstJs">
-								<img src="images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
-							</a>
-							<a class="product__img" id="productImgSecondJs">
-								<img src="images/video_cards/catalogue/RadeonRX580_2.jpg" alt="">
-							</a>
+					<div class="catalogue__inner">
+						<div class="catalogue__menu">
+							<a class="catalogue__link" href="#">Новинки</a>
+							<a class="catalogue__link" href="#">Распродажа</a>
+							<a class="catalogue__link" href="#">nVidia</a>
+							<a class="catalogue__link" href="#">Radeon</a>
 						</div>
 
-						<div class="wrapper">
-							<div class="slider-small">
-								<div class="slider-small__item">
-									<img src="images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
+						<div class="catalogue__item">
+							<div class="catalogue__title catalogue__pages">
+								<h2>Магазин</h2>
+							</div>
+
+							<div class="goods goods__shop">
+								<div class="goods__item">
+									<a href="nVidia-GTX-1080-ti.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="../images/video_cards/catalogue/GTX1080_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">nVidia GTX 1080 ti</div>
+										</div>
+									</a>
+									<div class="goods__price">18 000 ₴</div>
 								</div>
-								<div class="slider-small__item">
-									<img src="images/video_cards/catalogue/RadeonRX580_2.jpg" alt="">
+
+								<div class="goods__item">
+									<a href="nVidia-RTX-3060-ti.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="../images/video_cards/catalogue/RTX3060Ti_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">nVidia RTX 3060 ti</div>
+										</div>
+									</a>
+									<div class="goods__price">56 000 ₴</div>
+								</div>
+
+								<div class="goods__item">
+									<a href="Radeon-RX-580.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="../images/video_cards/catalogue/RadeonRX580_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">Radeon RX 580</div>
+										</div>
+									</a>
+									<div class="goods__price">18 000 ₴</div>
+								</div>
+
+								<div class="goods__item">
+									<div class="goods__discount">
+										суперцена
+									</div>
+									<a href="Radeon-RX-5700-XT.html">
+										<div class="goods__inner">
+											<div class="goods__img">
+												<img src="../images/video_cards/catalogue/RadeonRX5700xt_1.jpg" alt="">
+											</div>
+											<div class="goods__brand">Radeon RX 5700 xt</div>
+										</div>
+									</a>
+									<div class="goods__price">39 999 ₴ <strike>47 000 ₴</strike></div>
 								</div>
 							</div>
+
 						</div>
-
-						<div class="product__item product__item-second">
-							<div class="product__title">Radeon RX 580</div>
-
-							<div class="product__subtitle">Производитель <strong>Radeon</strong></div>
-
-							<div class="product__price">18 000₴</div>
-
-							<a href="#" class="btn btn-red" id="product-btn">купить</a>
-
-							<div class="product__characteristics">Характеристики</div>
-
-							<div class="product__quality">
-								<span class="title">Гарантия</span>
-								<span class="value">12 месяцев</span>
-							</div>
-
-							<div class="product__quality">
-								<span class="title">Страна</span>
-								<span class="value">Китай</span>
-							</div>
-
-							<div class="product__quality">
-								<span class="title">Производитель</span>
-								<span class="value">nVidia</span>
-							</div>
-
-							<div class="accordion">
-								<button class="accordion__btn accordion-disactive">Особенности</button>
-								<div class="accordion__panel">
-									<ul>
-										<li>Объем памяти: 11 ГБ</li>
-										<li>Разъемы: DVI</li>
-										<li>Разрядность шины памяти: 352 бит</li>
-										<li>Тип памяти: GDDR5X</li>
-										<li>Интерфейс: PCI-Express x16 3.0</li>
-										<li>Форм-фактор: Дискретная (Стандартная)</li>
-										<li>Тип системы охлаждения: Активная</li>
-										<li>Дополнительное питание: 8 + 8 pin</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</div>
-
-
-
-			<!-- Появляющееся большое фото при клике на его превью -->
-			<a href="#" class="lightbox" id="lightbox1">
-				<span style="background-image: url(images/video_cards/catalogue/RadeonRX580_1.jpg)">Big image</span>
-			</a>
-
-			<a href="#" class="lightbox" id="lightbox2">
-				<span style="background-image: url(images/video_cards/catalogue/RadeonRX580_2.jpg)">Big image</span>
-			</a>
 
 			<footer>
 				<div class="container">
@@ -404,7 +396,7 @@
 						<div class="footer__logo">
 							<div class="logo">
 								<!-- В картинке добавил fill-opacity="0" после цвета фона что бы сделать его прозрачным -->
-								<img src="images/logo/dave-graphics.svg" alt="">
+								<img src="../images/logo/dave-graphics.svg" alt="">
 							</div>
 							<a href="#" class="footer__link">
 								<svg class="footer__icon">
@@ -512,11 +504,8 @@
 		</article>
 	</main>
 
-	<!-- JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/app.js"></script>
+
+	<script src="../js/app.js"></script>
 </body>
 
 </html>
