@@ -1,0 +1,82 @@
+.slide-down {
+	display: none;
+	position: absolute;	
+	top: 100px;
+	left: 0;
+	padding: 15px 0;
+	z-index: 1000;
+	width: 100%;
+	background-color: $white;
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid rgba($color: #c5c0c0, $alpha: .5);
+	.slide-down__row {
+		display: flex;
+		justify-content: space-between;
+		.slide-down__column {
+			display: flex;
+			flex-direction: column;
+			margin-top: 20px;
+			.slide-down__link {
+				margin: 10px 0;
+				color: $black;
+				font-size: 0.93rem;
+				text-transform: uppercase;
+				font-weight: 600;
+				&:hover {
+					color: $red;
+				}
+			}		
+		}
+		.goods__item {
+			width: 200px;
+			.goods__inner {
+				.goods__img {
+					width: 200px;
+					img {
+						width: 180px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Анимирование движущегося блока
+.slide-down {
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown; 
+
+	animation-duration: 1s; 
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;    
+	-webkit-animation-timing-function: ease;    
+
+	visibility: visible !important;  
+}
+
+@keyframes slideDown { // Выставил opacity: 0, чтобы блок не сразу появлялся
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+   }       
+	100% {
+		 transform: translateY(0%);
+	}       
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		opacity: 0;
+	}           
+	100% {
+		-webkit-transform: translateY(0%);
+	}   
+}

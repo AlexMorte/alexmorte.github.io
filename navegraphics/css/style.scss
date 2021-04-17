@@ -1,0 +1,284 @@
+// Файл обнуления
+@import "_nullstyle";
+
+// Переменные
+$white:#fff;
+$black:#000;
+$lightBlack:#333333;
+$red:#b81f25;
+$green:#43d430;
+$gray:#c5c0c0;
+
+body {
+	font-family: 'Exo 2',sans-serif;
+}
+
+svg {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $white
+}
+
+a:hover {
+	transition: .2s linear;
+}
+
+main {
+	article {
+		transition: all .5s;
+	}
+}
+
+// Блоки
+@import "blocks/_container";
+@import "blocks/_header";
+@import "blocks/_sidebar";
+@import "blocks/_logo";
+@import "blocks/_basket";
+@import "blocks/_slider";
+@import "blocks/_categories";
+@import "blocks/_btn";
+@import "blocks/_catalogue";
+@import "blocks/_footer";
+@import "blocks/_info";
+@import "blocks/_new-items";
+@import "blocks/_goods";
+@import "blocks/_discounts";
+@import "blocks/_social";
+@import "blocks/_currency";
+@import "blocks/_slide-down";
+@import "blocks/_form";
+@import "blocks/_burger";
+@import "blocks/_contacts";
+@import "blocks/_product";
+@import "blocks/_slider-small";
+@import "blocks/_slider-btn";
+@import "blocks/_accordion";
+
+/* Media ===================== */
+@media (max-width: 1150px) {
+	.categories__row {
+		flex-direction: column;
+	}
+
+	.catalogue__inner {
+		flex-direction: column;
+	}
+	.catalogue__menu {
+		margin-right: 30px;
+	}
+}
+
+@media (max-width: 980px) {
+	.product {
+		display: table;
+		margin: auto;
+		.product__inner {
+			flex-direction: column;
+			.product__item:not(.product__item-second) {
+				display: none;
+			}
+			.product__item-second {
+				width: auto;
+				margin: auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 830px) {
+	.header {
+		.header__inner {
+			.header__item {
+				.nav {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.burger {
+		display: block;
+	}
+
+	.categories__img {
+		width: 360px;
+		img{
+			width: 360px;
+		}
+	}
+
+	.info {
+		margin-top: 15px;
+		.info__row {
+			flex-direction: column;	
+			.info__photo {
+				width: 100%;
+				img {
+					width: 100vw;
+				}
+			}	
+			.info__title {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.new-items {
+		margin-top: 160px;
+	}
+
+	.slider-small {
+		margin: 30px 0;
+		max-width: 280px;
+		height: 260px;
+		.slider-small__item img {
+			width: 260px;
+		} 
+	}
+
+	.contacts {
+		.contacts__item {
+			display: table;
+			margin: auto;
+		}
+		.contacts__inner {
+			flex-direction: column;
+		}
+	}
+	
+	
+	footer {
+		.footer__row {
+			flex-direction: column;
+			.footer__logo {
+				display: table;
+				margin: auto;
+				.footer__link {
+					display: flex;
+					justify-content: center;
+				}
+				img {
+					display: table;
+					margin: auto;
+				}
+			}
+			.footer__inner {
+				width: auto;
+				flex-direction: column;
+				.nav__link {
+					display: table;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.footer__line {
+					flex-direction: row;
+					justify-content: center;
+				}
+				.footer__schedule {
+					display: table;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.footer__schedule-subtitle {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.footer__bottom {
+			//flex-direction: column;
+			justify-content: center;
+		}
+		.social__text {
+			display: table;
+			margin: auto;
+		}
+		.social__inner {
+			justify-content: center;
+		}
+	}	
+}
+
+@media (max-width: 480px) {
+	.header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.logo {
+		img {
+			display: none;
+		}
+	}
+
+	.search {
+		display: none;
+	}
+	.slider {
+		.slider__slides {
+			.slider__item {
+				.slider__content {
+					h1 {
+						text-align: center;
+						font-size: 2rem;
+					}
+					h3 {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.categories__img {
+		width: 260px;
+		img{
+			width: 260px;
+		}
+	}
+
+	.discounts {
+		.discounts__content {
+			.discounts__text {
+				font-size: 2rem;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	.btn-small {
+		width: 130px;
+		padding: 8px 0;
+	}
+
+	.sidebar {
+		width: 300px;
+		right: -320px;
+	}
+
+	.menu-sidebar {
+		left: -300px;
+	}
+
+	#menu-checkbox:checked ~ main > article {
+		transform: translateX(300px); 
+	}
+
+	.slider-small {
+		margin: 30px 0;
+		max-width: 220px;
+		height: 200px;
+		.slider-small__item img {
+			width: 200px;
+		} 
+	}
+	
+	#product-btn {
+		width: 150px;
+	}
+}
+
+

@@ -1,0 +1,110 @@
+.slider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	max-height: 100vh; /* Адаптировал под разные форматы экранов. Что бы окно слайдера не занимало больше места, чем сам слайдер */
+	input {
+		display: none;
+	}
+	.slider__slides{
+		width: 200%;
+		height: auto;
+		display: flex;
+		.slider__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 50%;
+			transition: .8s;
+			img {
+				// ! Размещаю картинку на весь экран
+				object-fit: cover;
+				width: 100%;
+				height: auto;
+			}	
+			.slider__content {
+				width: 100%; /* Что бы текст не сворачивался при переходе от одного слайда к другому на малом экране */
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+	
+				color: $white;
+				text-transform: uppercase;
+				h1 {
+					margin-bottom: 25px;
+					font-size: 2.666rem;
+					font-weight: 700;
+				}
+				h3 {
+					font-size: 1.06rem;
+					line-height: 150%;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	// Ручная навигация
+	.navigation-manual {
+		position: absolute;
+		width: 100%;
+		margin-top: -6%;
+		display: flex;
+		justify-content: center;
+		.manual-btn {
+			border: 2px solid $white;
+			padding: 5px;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: .4s;
+			&:not(:last-child) {
+				margin-right: 4px;
+			} // ! Что бы отделить кнопку от другой
+			&:hover {
+				background: $red;
+			}
+		}	
+	}
+	#radio1:checked ~ .slider__item-current {
+		margin-left: 0;
+		background: $red;
+	}
+
+	#radio2:checked ~ .slider__item-current {
+		margin-left: -50%;
+	}
+
+	input:focus {
+		color: $red;
+	}
+
+	// Автоматическая навигация
+	.navigation-auto {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 90px;
+		div {
+			display: none;
+			border: 2px solid $white;
+			padding: 5px;
+			border-radius: 10px;
+			transition: .4s;
+			&:not(:last-child) {
+				margin-right: 4px;
+			}
+		}
+	}
+	#radio1:checked ~ .navigation-auto .auto-btn1{
+		background: $red;
+	}
+
+	#radio2:checked ~ .navigation-auto .auto-btn2{
+		background: $red;
+	}
+}
+

@@ -1,0 +1,37 @@
+.categories {
+	padding-top: 80px;
+	.categories__title {
+		margin-bottom: 30px;
+		text-align: center;
+		color: $lightBlack;
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.categories__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.categories__inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+				.btn {
+					background-color: $red; // Что бы кнопка подсвечивалась при наведении на картинку
+				}
+			}
+			.categories__img {
+				display: inline-block;
+				overflow: hidden;			
+				img {
+					transition: .8s;
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.catalogue {
+	padding-top: 120px;
+	.catalogue__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		h2 {
+			color: $red;
+			font-size: 2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+		}
+		h3 {
+			max-width: 390px;
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 25px;
+			margin-bottom: 30px;
+		}
+	}
+	.catalogue__pages {
+		align-items: start;
+		h2 {
+			color: $lightBlack;
+			font-size: 2rem;
+		}
+	}	
+
+	// Свойства этого блока для других страниц
+	
+	.catalogue__inner {
+		display: flex;
+		justify-content: space-between;	
+		.catalogue__menu {
+			display: flex;
+			flex-direction: column;
+			width: 240px;
+			height: 200px;
+			padding: 20px;
+			border: 1px solid rgba($color: #c5c0c0, $alpha: .3);
+			border-radius: 3px;
+			.catalogue__link {
+				padding: 5px 0;
+				font-size: 1.2rem;
+				color: $lightBlack;
+				transition: .2s linear;
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		.catalogue__item {
+			width: 80%;
+			max-width: 870px;	
+		}	
+	}
+}
+
+.catalogue__shop {
+	padding-top: 50px;
+}
+
+
